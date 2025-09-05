@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎮 Sílabas Al Rescate ✨</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="game-container">
+
+  
+    <div id="welcomePage" class="welcome-section">
+      
+      <div class="game-title">
+  <img src="titulo.png" alt="Título del juego">
+</div>
+
+      <div class="title-decoration">
+        <span class="star">⭐</span>
+        <span class="star">🌟</span>
+        <span class="star">⭐</span>
+      </div>
+
+      <p class="game-description">
+        Una aventura llena de juegos, retos y diversión donde las sílabas son las protagonistas.
+        Une, descubre y clasifica palabras mientras fortaleces tu conciencia silábica jugando y aprendiendo.
+        <br> 🎉
+      </p>
+
+      <div class="games-info">
+        <div class="game-card game-1" onclick="showGameIntro(1)">
+          <div class="game-icon">🧩</div>
+          <h3>Juego 1</h3>
+          <p>Forma la Palabra</p>
+          <div class="difficulty">Une las sílabas</div>
+        </div>
+
+        <div class="game-card game-2" onclick="showGameIntro(2)">
+          <div class="game-icon">🔤</div>
+          <h3>Juego 2</h3>
+          <p>Separa en Sílabas</p>
+          <div class="difficulty">Divide palabras</div>
+        </div>
+
+        <div class="game-card game-3" onclick="showGameIntro(3)">
+          <div class="game-icon">🔍</div>
+          <h3>Juego 3</h3>
+          <p>¿Con qué empieza?</p>
+          <div class="difficulty">Encuentra sílabas</div>
+        </div>
+
+        <div class="game-card game-4" onclick="showGameIntro(4)">
+          <div class="game-icon">🐠</div>
+          <h3>Juego 4</h3>
+          <p>La Pecera Silábica</p>
+          <div class="difficulty">Clasifica palabras</div>
+        </div>
+      </div>
+
+      <p class="game-description">
+        👉 Entra al mundo donde las sílabas cobran vida, ¡tú eres el héroe que las unirá! 🌟
+      </p>
+
+      <div class="instructions">
+        <h3>📖 ¿Cómo jugar?</h3>
+        <div class="instruction-steps">
+          <div class="step">
+            <span class="step-number">1️⃣</span>
+            <span>Elige tu juego favorito</span>
+          </div>
+          <div class="step">
+            <span class="step-number">2️⃣</span>
+            <span>Sigue las instrucciones de cada juego</span>
+          </div>
+          <div class="step">
+            <span class="step-number">3️⃣</span>
+            <span>¡Diviértete aprendiendo!</span>
+          </div>
+          <div class="step">
+            <span class="step-number">4️⃣</span>
+            <span>¡Completa todos los juegos! 🎉</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PÁGINAS DE INTRODUCCIÓN -->
+    <!-- INTRODUCCIÓN JUEGO 1 -->
+    <div id="game1Intro" class="game-intro">
+      <div class="intro-header">
+       
+         <img class="intro-title" src="titulojuego1.png">
+        <div class="intro-decoration">
+          <span class="floating-emoji">✨</span>
+          <span class="floating-emoji">🎯</span>
+          <span class="floating-emoji">⭐</span>
+        </div>
+      </div>
+
+      <div class="intro-description">
+        <p>¡Conviértete en un constructor de palabras! Tu misión es unir las sílabas dispersas para formar palabras completas. ¡Es como un rompecabezas mágico donde cada pieza es una sílaba!</p>
+      </div>
+
+      <div class="intro-preview">
+        <div class="preview-word">🏠</div>
+        <div class="preview-syllables">
+          <span class="preview-syl">CA</span>
+          <span class="preview-plus">+</span>
+          <span class="preview-syl">SA</span>
+          <span class="preview-equals">=</span>
+          <span class="preview-result">CASA</span>
+        </div>
+      </div>
+
+      <div class="instructions">
+        <h3>📖 ¿Cómo jugar?</h3>
+        <div class="instruction-steps">
+          <div class="step">
+            <span class="step-number">1️⃣</span>
+            <span>Observa la imagen y piensa en la palabra</span>
+          </div>
+          <div class="step">
+            <span class="step-number">2️⃣</span>
+            <span>Selecciona una casilla vacía</span>
+          </div>
+          <div class="step">
+            <span class="step-number">3️⃣</span>
+            <span>Haz clic en la sílaba correcta</span>
+          </div>
+          <div class="step">
+            <span class="step-number">4️⃣</span>
+            <span>Completa todas las casillas y verifica</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="intro-buttons">
+        <button class="btn btn-play" onclick="startGame(1)">🚀 ¡Jugar Ahora!</button>
+        <button class="btn btn-back-intro" onclick="goToWelcome()">🏠 Volver</button>
+      </div>
+    </div>
+
+    <!-- INTRODUCCIÓN JUEGO 2 -->
+<div id="game2Intro" class="game-intro">
+  <div class="intro-header">
+   
+    <img class="intro-title" src="titulojuego2.png"/>
+    <div class="intro-decoration">
+      <span class="floating-emoji">🔧</span>
+      <span class="floating-emoji">⚡</span>
+      <span class="floating-emoji">🎯</span>
+    </div>
+  </div>
+
+  <div class="intro-description">
+    <p>¡Conviértete en un arquitecto de palabras! Tu misión es tomar todas las letras de una palabra y reorganizarlas para separarlas correctamente en sílabas. ¡Usa el separador mágico para dividir cada sílaba!</p>
+  </div>
+
+  <div class="intro-preview">
+    <div class="preview-word-separation">
+      <span class="word-part">C</span>
+      <span class="word-part">A</span>
+      <span class="word-part">S</span>
+      <span class="word-part">A</span>
+      <span class="separator-demo">-</span>
+    </div>
+    <div class="worm-demo">
+      <span class="worm-segment">CA - SA</span>
+    </div>
+  </div>
+
+  <div class="instructions">
+    <h3>📖 ¿Cómo jugar?</h3>
+    <div class="instruction-steps">
+      <div class="step">
+        <span class="step-number">1️⃣</span>
+        <span>Observa todas las letras disponibles</span>
+      </div>
+      <div class="step">
+        <span class="step-number">2️⃣</span>
+        <span>Haz clic en las letras para formar la primera sílaba</span>
+      </div>
+      <div class="step">
+        <span class="step-number">3️⃣</span>
+        <span>Usa el botón separador (-) para dividir las sílabas</span>
+      </div>
+      <div class="step">
+        <span class="step-number">4️⃣</span>
+        <span>Completa todas las letras y verifica tu construcción</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="intro-buttons">
+    <button class="btn btn-play" onclick="startGame(2)">🚀 ¡Jugar Ahora!</button>
+    <button class="btn btn-back-intro" onclick="goToWelcome()">🏠 Volver</button>
+  </div>
+</div>
+
+    <!-- INTRODUCCIÓN JUEGO 3 -->
+    <div id="game3Intro" class="game-intro">
+      <div class="intro-header">
+       
+     <img class="intro-title" src="titulojuego3.png"/>
+        <div class="intro-decoration">
+          <span class="floating-emoji">🕵️</span>
+          <span class="floating-emoji">❓</span>
+          <span class="floating-emoji">💡</span>
+        </div>
+      </div>
+
+      <div class="intro-description">
+        <p>¡Conviértete en un detective de sílabas! Tu misión es descubrir con qué sílaba empiezan y terminan las palabras. Usa tu lupa mágica para encontrar las pistas correctas.</p>
+      </div>
+
+      <div class="intro-preview">
+        <div class="detective-preview">
+          <div class="preview-word">🏠 CASA</div>
+          <div class="question-demo">¿Con qué empieza?</div>
+          <div class="options-demo">
+            <span class="option correct-demo">CA</span>
+            <span class="option">PE</span>
+            <span class="option">SO</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="instructions">
+        <h3>📖 ¿Cómo jugar?</h3>
+        <div class="instruction-steps">
+          <div class="step">
+            <span class="step-number">1️⃣</span>
+            <span>Observa la palabra y su imagen</span>
+          </div>
+          <div class="step">
+            <span class="step-number">2️⃣</span>
+            <span>Lee la pregunta atentamente</span>
+          </div>
+          <div class="step">
+            <span class="step-number">3️⃣</span>
+            <span>Elige la sílaba correcta</span>
+          </div>
+          <div class="step">
+            <span class="step-number">4️⃣</span>
+            <span>¡Resuelve el misterio!</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="intro-buttons">
+        <button class="btn btn-play" onclick="startGame(3)">🚀 ¡Jugar Ahora!</button>
+        <button class="btn btn-back-intro" onclick="goToWelcome()">🏠 Volver</button>
+      </div>
+    </div>
+
+    <!-- INTRODUCCIÓN JUEGO 4 -->
+    <div id="game4Intro" class="game-intro">
+      <div class="intro-header">
+       
+       <img class="intro-title" src="titulojuego4.png"/>
+        <div class="intro-decoration">
+          <span class="floating-emoji">🌊</span>
+          <span class="floating-emoji">🐟</span>
+          <span class="floating-emoji">💎</span>
+        </div>
+      </div>
+
+      <div class="intro-description">
+        <p>¡Ayuda a los peces a encontrar su hogar! Cada pez tiene una palabra y debe ir a la pecera que corresponde al número de sílabas. ¡Cuenta las sílabas y encuentra la pecera perfecta!</p>
+      </div>
+
+      <div class="intro-preview">
+        <div class="aquarium-preview">
+          <div class="fish-demo">🐟 CASA</div>
+          <div class="arrow-demo">➡️</div>
+          <div class="tank-demo">
+            <div class="tank-label">2 sílabas</div>
+            <div class="tank-visual">🐠🐠</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="instructions">
+        <h3>📖 ¿Cómo jugar?</h3>
+        <div class="instruction-steps">
+          <div class="step">
+            <span class="step-number">1️⃣</span>
+            <span>Lee la palabra del pez</span>
+          </div>
+          <div class="step">
+            <span class="step-number">2️⃣</span>
+            <span>Cuenta las sílabas de la palabra</span>
+          </div>
+          <div class="step">
+            <span class="step-number">3️⃣</span>
+            <span>Haz clic en la pecera correcta</span>
+          </div>
+          <div class="step">
+            <span class="step-number">4️⃣</span>
+            <span>¡Ayuda a todos los peces!</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="intro-buttons">
+        <button class="btn btn-play" onclick="startGame(4)">🚀 ¡Jugar Ahora!</button>
+        <button class="btn btn-back-intro" onclick="goToWelcome()">🏠 Volver</button>
+      </div>
+    </div>
+
+    <!-- JUEGO 1: FORMA LA PALABRA -->
+    <div id="game1Page" class="game-page">
+      <div class="header">
+        <div class="level-info" id="levelInfo">Juego 1 - Forma la Palabra</div>
+        <div class="progress">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <div class="word-counter" id="wordCounter">Palabra 1 de 3</div>
+      </div>
+
+      <div class="game-area">
+        <div class="word-display">
+          <div class="word-image" id="wordImage">🎯</div>
+        </div>
+        <div class="word-slots" id="wordSlots"></div>
+        <div class="syllables-area">
+          <div class="syllables" id="syllables"></div>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button class="btn btn-check" id="btnCheck" onclick="checkWord()">✅ Verificar</button>
+        <button class="btn btn-next hidden" id="btnNext" onclick="nextWord()">➡️ Siguiente</button>
+        <button class="btn btn-reset" onclick="resetWord()">🔄 Reiniciar</button>
+        <button class="btn btn-back" onclick="goToWelcome()">🏠 Inicio</button>
+      </div>
+    </div>
+
+    <!-- JUEGO 2: SEPARA EN SÍLABAS -->
+    <div id="game2Page" class="game-page">
+      <div class="header">
+        <div class="level-info">Juego 2 - Separa en Sílabas</div>
+        <div class="progress">
+          <div class="progress-bar" id="progressBar2"></div>
+        </div>
+        <div class="word-counter" id="wordCounter2">Palabra 1 de 5</div>
+      </div>
+
+      <div class="game-area">
+        <div class="worm-container">
+          <div class="worm-head">🔤</div>
+          <div class="instruction-text"></div>
+        </div>
+        
+        <div class="word-to-separate" id="wordToSeparate">CASA</div>
+        <div class="separation-area" id="separationArea"></div>
+        
+        <div class="worm-segments" id="wormSegments"></div>
+      </div>
+
+      <div class="buttons">
+        <button class="btn btn-check" id="btnCheck2" onclick="checkSeparation()">✅ Verificar</button>
+        <button class="btn btn-next hidden" id="btnNext2" onclick="nextWord2()">➡️ Siguiente</button>
+        <button class="btn btn-reset" onclick="resetSeparation()">🔄 Reiniciar</button>
+        <button class="btn btn-back" onclick="goToWelcome()">🏠 Inicio</button>
+      </div>
+    </div>
+
+    <!-- JUEGO 3: ¿CON QUÉ EMPIEZA? -->
+    <div id="game3Page" class="game-page">
+      <div class="header">
+        <div class="level-info">Juego 3 - ¿Con qué empieza y termina?</div>
+        <div class="progress">
+          <div class="progress-bar" id="progressBar3"></div>
+        </div>
+        <div class="word-counter" id="wordCounter3">Pregunta 1 de 40</div>
+      </div>
+
+      <div class="game-area">
+        <div class="detective-container">
+          <div class="detective">🔍</div>
+          <div class="question-text" id="questionText">¿Con qué empieza esta palabra?</div>
+        </div>
+        
+        <div class="word-display">
+          <div class="word-image" id="wordImage3">🏠</div>
+          <div class="word-name" id="wordName3">CASA</div>
+        </div>
+        
+        <div class="syllable-options" id="syllableOptions3"></div>
+      </div>
+
+      <div class="buttons">
+        <button class="btn btn-next hidden" id="btnNext3" onclick="nextQuestion()">➡️ Siguiente</button>
+        <button class="btn btn-back" onclick="goToWelcome()">🏠 Inicio</button>
+      </div>
+    </div>
+
+    <!-- JUEGO 4: LA PECERA SILÁBICA -->
+    <div id="game4Page" class="game-page">
+      <div class="header">
+        <div class="level-info">Juego 4 - La Pecera Silábica</div>
+        <div class="progress">
+          <div class="progress-bar" id="progressBar4"></div>
+        </div>
+        <div class="word-counter" id="wordCounter4">Pez 1 de 25</div>
+      </div>
+
+      <div class="game-area">
+        <div class="aquarium-intro">
+          <div class="instruction-text">¡Ayuda a los peces a encontrar su pecera según sus sílabas!</div>
+        </div>
+        
+        <div class="aquariums-container">
+          <div class="aquarium" data-syllables="1">
+            <div class="aquarium-label">1 sílaba</div>
+            <div class="aquarium-tank">
+              <div class="swimming-fish">🐠</div>
+            </div>
+            <div class="aquarium-bottom"></div>
+          </div>
+          <div class="aquarium" data-syllables="2">
+            <div class="aquarium-label">2 sílabas</div>
+            <div class="aquarium-tank">
+              <div class="swimming-fish">🐠</div>
+              <div class="swimming-fish">🐠</div>
+            </div>
+            <div class="aquarium-bottom"></div>
+          </div>
+          <div class="aquarium" data-syllables="3">
+            <div class="aquarium-label">3 sílabas</div>
+            <div class="aquarium-tank">
+              <div class="swimming-fish">🐠</div>
+              <div class="swimming-fish">🐠</div>
+              <div class="swimming-fish">🐠</div>
+            </div>
+            <div class="aquarium-bottom"></div>
+          </div>
+          <div class="aquarium" data-syllables="4">
+            <div class="aquarium-label">4 sílabas</div>
+            <div class="aquarium-tank">
+              <div class="swimming-fish">🐠</div>
+              <div class="swimming-fish">🐠</div>
+              <div class="swimming-fish">🐠</div>
+              <div class="swimming-fish">🐠</div>
+            </div>
+            <div class="aquarium-bottom"></div>
+          </div>
+        </div>
+        
+        <div class="fish-to-place" id="fishToPlace">
+          <div class="fish-image" id="fishImage">🐟</div>
+          <div class="fish-word" id="fishWord">CASA</div>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button class="btn btn-next hidden" id="btnNext4" onclick="nextFish()">➡️ Siguiente</button>
+        <button class="btn btn-back" onclick="goToWelcome()">🏠 Inicio</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal infantil -->
+  <div id="customModal" class="modal hidden">
+    <div class="modal-content bounce">
+      <span id="modalEmoji">🎉</span>
+      <p id="modalMessage">¡Nivel completado!</p>
+      <button id="modalBtn">Aceptar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
